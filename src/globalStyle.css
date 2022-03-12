@@ -1,0 +1,7 @@
+body {
+  background-color: #1b1b1b;
+  color: whitesmoke;
+  font-family: "Nanum Gothic", sans-serif;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap");
