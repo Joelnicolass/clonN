@@ -1,4 +1,5 @@
 import React from "react";
+import Navbar from "../Navbar/Navbar";
 
 const styles = {
   layout: {
@@ -14,7 +15,11 @@ const styles = {
 const Layout = ({ children }) => {
   return (
     <div style={styles.layout}>
+      <header>
+        <Navbar></Navbar>
+      </header>
       <div style={styles.container}>{children}</div>
+      <footer></footer>
     </div>
   );
 };
