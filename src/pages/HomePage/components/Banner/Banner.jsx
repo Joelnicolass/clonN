@@ -27,7 +27,23 @@ const Banner = () => {
           </p>
         </div>
         <div className="banner_buttons">
-          <button className="banner_button"> ► Reproducir</button>
+          <button
+            onClick={() => {
+              // fetch
+              const req = fetch(
+                "https://api.themoviedb.org/3/tv/popular?api_key=4731f843be0ef719c516f748dad07f59&language=en-US&page=1"
+              )
+                .then((res) => res.json())
+                .then((data) => {
+                  /* https://image.tmdb.org/t/p/w500/ */
+                  console.log(data);
+                });
+            }}
+            className="banner_button"
+          >
+            {" "}
+            ► Reproducir
+          </button>
           <button className="banner_button"> Mas información</button>
         </div>
       </div>

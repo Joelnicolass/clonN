@@ -26,6 +26,11 @@
   margin-right: 0.5em;
 }
 
+.banner_header p {
+  color: rgb(255, 255, 255);
+  font-size: 1.5rem;
+}
+
 .banner_sub {
   font-size: 1.8rem;
   color: #fff;
@@ -42,12 +47,16 @@
   margin-top: 2em;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: flex-start;
+}
+
+.banner_buttons button:nth-child(2) {
+  margin-left: 2em;
 }
 
 .banner_button {
   width: 220px;
-  height: 50px;
+  height: 55px;
   background-color: rgba(224, 224, 224, 1);
   color: rgb(0, 0, 0);
   font-size: 1.2rem;
