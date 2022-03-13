@@ -1,5 +1,7 @@
+import { movieTypes } from "../common/movies";
+import { tvTypes } from "../common/tv";
+
 export const homePageTypes = {
-  START_LOADING: "START_LOADING",
-  ERROR_LOADING: "ERROR_LOADING",
-  SUCCESS_LOADING: "SUCCESS_LOADING",
+  ...movieTypes,
+  ...tvTypes,
 };

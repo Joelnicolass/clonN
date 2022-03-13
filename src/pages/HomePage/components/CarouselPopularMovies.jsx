@@ -9,7 +9,7 @@ const CarouselPopularMovies = ({ popularMovies }) => {
       <Carousel>
         {popularMovies.map((movie) => (
           <SwiperSlide key={movie.id}>
-            <Card />
+            <Card data={movie} />
           </SwiperSlide>
         ))}
       </Carousel>

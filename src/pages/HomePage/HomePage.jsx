@@ -33,8 +33,8 @@ const HomePage = () => {
         </div>
       ) : (
         <>
-          <Banner data={apiState.data.results[0]} type={"movie"} />
-          <CarouselPopularMovies popularMovies={apiState.data.results} />
+          <Banner data={apiState.data.popularMovies[0]} type={"movie"} />
+          <CarouselPopularMovies popularMovies={apiState.data.popularMovies} />
         </>
       )}
     </>

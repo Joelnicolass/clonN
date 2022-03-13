@@ -5,7 +5,6 @@ import { apiUrls } from "../utils/apiUtils";
 // get popular movies from server
 export const getPopularMovies = async (page = 1) => {
   const url = apiUrls.urlPopularMovies(page);
-  console.log(url);
   const response = await axios.get(url);
   return response.data;
 };

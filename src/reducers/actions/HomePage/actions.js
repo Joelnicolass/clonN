@@ -3,12 +3,18 @@ import { getPopularMovies as getPopularMoviesService } from "../../../services/s
 
 export const getPopularMovies = (page = 1) => {
   return async (dispatch) => {
-    dispatch({ type: homePageTypes.START_LOADING });
+    dispatch({ type: homePageTypes.START_LOADING_POPULAR_MOVIES });
     try {
       const res = await getPopularMoviesService(page);
-      dispatch({ type: homePageTypes.SUCCESS_LOADING, payload: res });
+      dispatch({
+        type: homePageTypes.SUCCESS_LOADING_POPULAR_MOVIES,
+        payload: res,
+      });
     } catch (error) {
-      dispatch({ type: homePageTypes.ERROR_LOADING, payload: error.message });
+      dispatch({
+        type: homePageTypes.ERROR_LOADING_POPULAR_MOVIES,
+        payload: error.message,
+      });
     }
   };
 };

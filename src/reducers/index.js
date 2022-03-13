@@ -5,41 +5,53 @@ const initStates = {
     isLoading: true,
     isError: false,
     errorMessage: "",
-    data: [],
+    data: {
+      popularMovies: [],
+      popularTv: [],
+    },
   },
 };
 
 // reducers
 export default function reducer(state = initStates, action) {
   switch (action.type) {
-    case types.homePage.START_LOADING:
+    case types.homePage.START_LOADING_POPULAR_MOVIES:
       return {
         ...state,
         api: {
           isLoading: true,
           isError: false,
           errorMessage: "",
-          data: [],
+          data: {
+            ...state.api.data,
+            popularMovies: [],
+          },
         },
       };
-    case types.homePage.SUCCESS_LOADING:
+    case types.homePage.SUCCESS_LOADING_POPULAR_MOVIES:
       return {
         ...state,
         api: {
           isLoading: false,
           isError: false,
           errorMessage: "",
-          data: action.payload,
+          data: {
+            ...state.api.data,
+            popularMovies: action.payload.results,
+          },
         },
       };
-    case types.homePage.ERROR_LOADING:
+    case types.homePage.ERROR_LOADING_POPULAR_MOVIES:
       return {
         ...state,
         api: {
           isLoading: false,
           isError: true,
           errorMessage: action.payload,
-          data: [],
+          data: {
+            ...state.api.data,
+            popularMovies: [],
+          },
         },
       };
 

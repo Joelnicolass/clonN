@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 //Swiper
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
@@ -7,10 +7,18 @@ import { Pagination, Navigation } from "swiper";
 import "./SwiperCarousel.css";
 
 const SwiperCarousel = ({ children }) => {
+  const [swiper, setSwiper] = useState(4);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setSwiper(5);
+    }, 1);
+  }, []);
+
   return (
     <>
       <Swiper
-        slidesPerView={5}
+        slidesPerView={swiper}
         spaceBetween={3}
         breakpoints={{
           "@0.00": {
