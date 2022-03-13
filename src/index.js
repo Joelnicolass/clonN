@@ -2,6 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import App from "./App";
 import "./globalStyle.css";
+import "swiper/css/bundle";
 
 //redux
 import { Provider } from "react-redux";

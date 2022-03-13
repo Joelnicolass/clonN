@@ -4,10 +4,6 @@ import "./Navbar.css";
 const Navbar = () => {
   const [scroll, setScroll] = useState(false);
 
-  /* 
-    effect for scrolling
-  */
-
   useEffect(() => {
     window.addEventListener("scroll", () => {
       if (window.scrollY > 100) {
