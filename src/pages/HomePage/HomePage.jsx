@@ -1,13 +1,12 @@
 import React from "react";
 import Banner from "./components/Banner/Banner";
 import CarouselCards from "./components/CarrouselCards/CarouselCards";
-import FilmCard from "./components/FilmCard/FilmCard";
+import Card from "../../commons/Card/Card";
 
 const HomePage = () => {
   return (
     <>
-      <Banner></Banner>
-
+      <Banner />
       <CarouselCards />
     </>
   );
