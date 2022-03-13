@@ -3,6 +3,7 @@
 }
 
 .card:hover {
+  z-index: 999 !important;
   transition: 0.3s;
   transition-delay: 0.5s;
   transform: scale(1.2);
