@@ -1,11 +1,23 @@
-import React from "react";
+import React, { useState } from "react";
 import { apiImages } from "../../utils/apiUtils";
 import "./Card.css";
 
 const Card = ({ data }) => {
+  const [hover, setHover] = useState(false);
+
+  const handleMouseOver = () => {
+    setHover(true);
+  };
+
+  const handleMouseOut = () => {
+    setHover(false);
+  };
+
   return (
     <div
       className="card"
+      onMouseOver={handleMouseOver}
+      onMouseOut={handleMouseOut}
       style={{
         width: "300px",
         height: "180px",
@@ -20,7 +32,17 @@ const Card = ({ data }) => {
         backgroundPosition: "center",
       }}
     >
-      <div className="card_header"></div>
+      <div className={`card_header ${hover && "active"}`}>
+        <h3>{data.title}</h3>
+      </div>
+
+      <div className={`card_buttons ${hover && "active"}`}>
+        <div className="card_buttons_container">
+          <button> ► </button>
+          <button> i </button>
+          <button> ♥ </button>
+        </div>
+      </div>
     </div>
   );
 };
