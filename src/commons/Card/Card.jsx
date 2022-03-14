@@ -19,6 +19,7 @@ const Card = ({ data }) => {
       onMouseOver={handleMouseOver}
       onMouseOut={handleMouseOut}
       style={{
+        borderRadius: hover ? "20px 20px 0 0" : "20px",
         width: "300px",
         height: "180px",
         marginLeft: "3px",
