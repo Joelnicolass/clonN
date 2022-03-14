@@ -15,7 +15,7 @@ const initStates = {
 // reducers
 export default function reducer(state = initStates, action) {
   switch (action.type) {
-    case types.homePage.START_LOADING_POPULAR_MOVIES:
+    case types.moive.START_LOADING_POPULAR_MOVIES:
       return {
         ...state,
         api: {
@@ -28,7 +28,7 @@ export default function reducer(state = initStates, action) {
           },
         },
       };
-    case types.homePage.SUCCESS_LOADING_POPULAR_MOVIES:
+    case types.moive.SUCCESS_LOADING_POPULAR_MOVIES:
       return {
         ...state,
         api: {
@@ -41,7 +41,7 @@ export default function reducer(state = initStates, action) {
           },
         },
       };
-    case types.homePage.ERROR_LOADING_POPULAR_MOVIES:
+    case types.moive.ERROR_LOADING_POPULAR_MOVIES:
       return {
         ...state,
         api: {

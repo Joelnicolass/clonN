@@ -1,5 +1,7 @@
-import { homePageTypes } from "./HomePage/types";
+import { movieTypes } from "./common/movies";
+import { tvTypes } from "./common/tv";
 
 export const types = {
-  homePage: homePageTypes,
+  moive: { ...movieTypes },
+  tv: { ...tvTypes },
 };

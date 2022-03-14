@@ -4,7 +4,6 @@ import Carousel from "../../commons/CarouselCards/Carousel";
 import Card from "../../commons/Card/Card";
 import { useDispatch, useSelector } from "react-redux";
 import { Oval } from "react-loader-spinner";
-import { homePageTypes } from "../../reducers/types/HomePage/types";
 import { getPopularMovies } from "../../reducers/actions/HomePage/actions";
 import CarouselPopularMovies from "./components/CarouselPopularMovies";
 
