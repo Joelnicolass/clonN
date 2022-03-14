@@ -1,7 +1,7 @@
 import React from "react";
 import { SwiperSlide } from "swiper/react";
-import Card from "../../../commons/Card/Card";
-import Carousel from "../../../commons/CarouselCards/Carousel";
+import Carousel from "../../../commons/components/CarouselCards/Carousel";
+import Card from "../../../commons/components/Card/Card";
 
 const CarouselPopularMovies = ({ popularMovies }) => {
   return (

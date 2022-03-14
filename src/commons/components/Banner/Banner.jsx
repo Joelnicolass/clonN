@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./Banner.css";
-import { apiImages } from "../../utils/apiUtils";
-import { getPopularMovies } from "../../services/services";
+import { apiImages } from "../../../utils/apiUtils";
+import { getPopularMovies } from "../../../services/services";
 
 const Banner = ({ data, type }) => {
   const [hideBannerHeader, setHideBannerHeader] = useState(false);

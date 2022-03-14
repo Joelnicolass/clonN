@@ -1,4 +1,4 @@
-import Layout from "./commons/Layout/Layout";
+import Layout from "./commons/components/Layout/Layout";
 import HomePage from "./pages/HomePage/HomePage";
 
 function App() {

@@ -1,5 +1,5 @@
 const globals = {
-  api: {
+  apiTMDB: {
     baseUrl: "https://api.themoviedb.org/3",
     type: {
       tv: "/tv",

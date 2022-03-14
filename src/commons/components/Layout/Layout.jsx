@@ -16,7 +16,7 @@ const Layout = ({ children }) => {
   return (
     <div style={styles.layout}>
       <header>
-        <Navbar></Navbar>
+        <Navbar />
       </header>
       <div style={styles.container}>{children}</div>
       <footer></footer>

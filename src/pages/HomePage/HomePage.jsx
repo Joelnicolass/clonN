@@ -1,11 +1,11 @@
 import React, { useEffect } from "react";
-import Banner from "../../commons/Banner/Banner";
-import Carousel from "../../commons/CarouselCards/Carousel";
-import Card from "../../commons/Card/Card";
+import Carousel from "../../commons/components/CarouselCards/Carousel";
 import { useDispatch, useSelector } from "react-redux";
 import { Oval } from "react-loader-spinner";
 import { getPopularMovies } from "../../reducers/actions/HomePage/actions";
 import CarouselPopularMovies from "./components/CarouselPopularMovies";
+import SubTitle from "../../commons/components/SubTitle/SubTitle";
+import Banner from "../../commons/components/Banner/Banner";
 
 const HomePage = () => {
   // state management
@@ -33,6 +33,7 @@ const HomePage = () => {
       ) : (
         <>
           <Banner data={apiState.data.popularMovies[0]} type={"movie"} />
+          <SubTitle text={"Las Peliculas más populares"} />
           <CarouselPopularMovies popularMovies={apiState.data.popularMovies} />
         </>
       )}
